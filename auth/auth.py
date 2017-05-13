@@ -202,7 +202,7 @@ def urls_for_oauth(next_url):
         # 'github_signin_url': url_for_signin('github', next_url),
         'google_signin_url': url_for_signin('google', next_url),
         'gae_signin_url': url_for_signin('gae', next_url),
-        # 'linkedin_signin_url': url_for_signin('linkedin', next_url),
+        'linkedin_signin_url': url_for_signin('linkedin', next_url),
     }
 
 
@@ -242,4 +242,4 @@ def signin_oauth(oauth_app, scheme=None):
             'Something went wrong with sign in. Please try again.',
             category='danger',
         )
-        return flask.redirect(flask.url_for('signin', next=util.get_next_url()))
+        return flask.redirect(flask.url_for('welcome', next=util.get_next_url()))

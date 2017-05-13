@@ -6,8 +6,14 @@ from google.appengine.api import app_identity
 from collections import namedtuple
 
 GoogleOAuth2ConfigDB = namedtuple('GoogleOAuth2ConfigDB', ['google_client_id', 'google_client_secret'])
+LinkedInOAuth2ConfigDB = namedtuple('LinkdeInOAuth2ConfigDB', ['linkedin_api_key', 'linkedin_secret_key'])
 
 GoogleOAuth2 = GoogleOAuth2ConfigDB(
+    'id',
+    'pass',
+)
+
+LinkedInOAuth2 = LinkedInOAuth2ConfigDB(
     'id',
     'pass',
 )
